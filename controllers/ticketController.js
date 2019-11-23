@@ -6,7 +6,7 @@ exports.createTicket = async (req, res) => {
     const newTicket = await ticket.create(req.body);
     res.status(201).json({
       status: 'success',
-      data: {tour: newTicket},
+      data: {ticket: newTicket},
     });
   } catch (err) {
     res.status(400).json({
